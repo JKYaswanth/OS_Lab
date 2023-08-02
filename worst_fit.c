@@ -14,7 +14,7 @@ int main(){
     printf("Enter the number of processes :- ");
     scanf("%d",&n);
     for(i=0;i<n;i++){
-        
+        scanf("%d",&psize[i]);
     }
     return 0;
 }

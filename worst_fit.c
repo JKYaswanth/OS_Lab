@@ -41,8 +41,14 @@ int main() {
     }
     
     printf("\nProcess_no\tProcess_size\tBlock_no\tBlock_size\tWastage\n");
-    for(i=1;i<=np&&parray[i]!=0;i++){
-        printf("\n%d\t\t%d\t\t%d\t\t%d\t\t%d\n",i,p[i],parray[i],b[parray[i]],fragment[i]);
+    for(i=1;i<=np;i++){
+        if(parray[i]!=0){
+            printf("\n%d\t\t%d\t\t%d\t\t%d\t\t%d\n",i,p[i],parray[i],b[parray[i]],fragment[i]);
+        }
+        else{
+            printf("\n%d\t\t%d\t\tUnallocated\t-\t\t-\n",i,p[i]);
+        }
+        
     }
     
     return 0;
